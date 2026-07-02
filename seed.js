@@ -24,8 +24,8 @@ const seedUsers = async () => {
     // Create the 4 seed users required by your specification guide
     const users = [
       {
-        username: 'admin',
-        password: await hashPassword('admin123'),
+        username: 'admin@yousafzaigroup.com',
+        password: await hashPassword('Admin@2025'),
         role: 'SuperAdmin',
         brandId: null, // Global access across all brands
       },

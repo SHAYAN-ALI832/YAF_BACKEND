@@ -1,6 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import uploadRoutes from './src/Routes/uploadroutes.js';
+import quoteRoutes from './src/Routes/qouteroutes.js';
+import cmsRoutes from './src/Routes/cmsroutes.js';
 import statsRoutes from './src/Routes/statsroutes.js';
 import traceabilityRoutes from './src/Routes/traceabilityroutes.js';
 import leadroutes from './src/Routes/leadroutes.js';
@@ -27,6 +30,9 @@ app.use('/api/products', productsroutes);
 app.use('/api/leads', leadroutes);
 app.use('/api/traceability', traceabilityRoutes);
 app.use('/api/stats', statsRoutes);
+app.use('/api/cms', cmsRoutes);
+app.use('/api/quotes', quoteRoutes);
+app.use('/api/upload', uploadRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
